@@ -14,15 +14,15 @@ class RingBuffer:
       self.current += 1
 
   def get(self):
-    pass
+    storage = [i for i in self.storage if i]
+
+    return storage
 
 rb = RingBuffer(5)
 
 rb.append(5)
 rb.append(6)
 rb.append(3)
-rb.append(2)
-rb.append(7)
-rb.append(10)
 
 print(rb.storage)
+print(rb.get())
