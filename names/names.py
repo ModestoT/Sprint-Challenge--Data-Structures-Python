@@ -18,9 +18,9 @@ f.close()
 # for i in names_1:    1.35 secs
 #     if i in names_2:
 #         duplicates.append(i)
-# duplicates = [i for i in names_1 if i in names_2]   1.29 secs
+# duplicates = [i for i in names_1 if i in names_2]   1.29 secs possible stretch solution using Lists for storing of the names
 
-duplicates = set(names_1).intersection(names_2) # .00399 secs
+duplicates = set(names_1).intersection(names_2) # .00399 secs sets use dictonaries so this solution can't be used for stretch
 
 end_time = time.time()
 print (f"{len(duplicates)} duplicates:\n\n{', '.join(duplicates)}\n\n")
